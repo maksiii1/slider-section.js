@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+.slider {
+  width: 95%;
+  margin: 1% auto;
+  height: 95%;
+  border: 1px solid rgb(218, 218, 218);
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: 35%;
+  flex-direction: column;
+}
+
+.slider__pagination,
+.slider__navs,
+.slider__name {
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  user-select: none;
+}
+
+.slider__pagination {
+  font-size: 40px;
+}
+
+.slider__navs {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.slider__navs div {
+  cursor: pointer;
+}
+
+.slider__name {
+  text-align: center;
+  font-size: 42px;
+}
