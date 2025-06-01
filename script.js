@@ -28,23 +28,20 @@ class Slider {
     if (element.textContent === "<") {
       this.id--;
 
-      if (this.id === -1) {
-        this.id = 2;
+      if (this.id < 0) {
+        this.id = this.slides.length - 1;
       }
-
-      slideContainer.style.backgroundImage = `url(${this.slides[this.id].img})`;
-      pags.textContent = `${this.id + 1} / 3`;
     } else {
-      if (this.id === 3) {
+      this.id++;
+
+      if (this.id >= this.slides.length) {
         this.id = 0;
       }
-
-      slideContainer.style.backgroundImage = `url(${this.slides[this.id].img})`;
-      pags.textContent = `${this.id + 1} / 3`;
-      this.id++;
     }
 
+    slideContainer.style.backgroundImage = `url(${this.slides[this.id].img})`;
     nameImg.textContent = `${this.slides[this.id].text}`;
+    pags.textContent = `${this.id + 1} / 3`;
   }
 }
 
